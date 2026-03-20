@@ -98,3 +98,26 @@ The dataset supports analysis of fields such as:
 
 ```DAX
 Total Patients = COUNT('Healthcare_dataset'[Name])
+
+Total Revenue = SUM('Healthcare_dataset'[Billing Amount])
+
+Average LOS = AVERAGE('Healthcare_dataset'[Length_of_Stay])
+
+Average Billing = AVERAGE('Healthcare_dataset'[Billing Amount])
+
+Revenue per Patient =
+DIVIDE([Total Revenue], [Total Patients])
+
+```
+
+## Key Insights
+
+Revenue is concentrated among a relatively small set of hospitals rather than being evenly distributed.
+
+Patient volume and hospital value do not always move together.
+
+Average LOS provides a more meaningful efficiency signal when compared by hospital.
+
+Revenue per patient is a stronger comparison metric than total revenue alone.
+
+Condition-level billing and age patterns can be explored through interactive filtering and scatter analysis.
