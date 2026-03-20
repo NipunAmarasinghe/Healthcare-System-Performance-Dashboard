@@ -2,17 +2,30 @@
 
 ## Objective
 
-The objective of this project was to build a healthcare performance dashboard in Power BI that provides both system-level and hospital-level insights using a patient dataset.
+The objective of this project was to build a healthcare performance dashboard in Power BI using the **Health_Care Real-World Data: 55K Patients** dataset.
+
+The aim was to convert patient-level healthcare data into a dashboard that supports system-level and hospital-level performance analysis.
+
+---
+
+## Dataset
+
+Source dataset:
+
+**Health_Care Real-World Data: 55K Patients**  
+Kaggle: `https://www.kaggle.com/datasets/prashantkumaryt/health-care-real-world-data-55k-patients`
+
+The dataset page states that it contains **55,500 healthcare patient records** in **1 CSV file**.
 
 ---
 
 ## Workflow
 
 ### 1. Data Loading
-The healthcare dataset was imported into Power BI Desktop and reviewed in Data View and Model View.
+The dataset was imported into Power BI Desktop from CSV format.
 
 ### 2. Data Validation
-Columns were checked for appropriate data types, including:
+Columns were reviewed for correct data types, including:
 
 - Date of Admission → Date
 - Discharge Date → Date
@@ -30,25 +43,17 @@ Core business measures were created using DAX:
 - Revenue per Patient
 
 ### 4. Dashboard Design
-The dashboard was structured into two pages:
+The report was structured into two pages:
 
 - Healthcare System Overview
 - Hospital Performance Analysis
 
-A consistent theme was applied using:
-
-- light grey page background
-- white card-style visual containers
-- dark blue KPI values
-- aligned slicer row
-- grouped chart sections
-
 ### 5. Visual Selection
-Visuals were chosen based on the business question being answered:
+Visual types were selected according to the question being answered:
 
 - KPI Cards → headline metrics
 - Line Chart → admissions trend
-- Bar / Column Charts → ranking and comparison
+- Bar / Column Charts → hospital and condition comparisons
 - Donut Chart → gender split
 - Scatter Chart → performance comparison
 
@@ -60,17 +65,13 @@ Dropdown slicers were added for:
 - Admission Type
 - Doctor
 
-These were placed consistently across the page to improve usability.
-
-### 7. Performance Interpretation
-The second page focused on hospital-level comparisons using:
+### 7. Interpretation
+Hospital-level performance was analysed using:
 
 - total revenue
 - patient volume
 - average LOS
 - revenue per patient
-
-This allowed the dashboard to move beyond descriptive reporting into comparative performance analysis.
 
 ---
 
@@ -78,21 +79,17 @@ This allowed the dashboard to move beyond descriptive reporting into comparative
 
 The report followed five main design principles:
 
-1. Clarity  
-2. Consistency  
-3. Visual hierarchy  
-4. Minimal clutter  
-5. Analyst-oriented storytelling
+1. clarity
+2. consistency
+3. visual hierarchy
+4. minimal clutter
+5. analyst-oriented storytelling
 
 ---
 
-## Limitations
+## Limitation
 
-This dataset appears to be synthetic or simulated, which means some distributions are more balanced than real hospital data. As a result:
-
-- some categories may appear evenly distributed
-- some averages may be closer together than in real-world systems
-- insights should be interpreted as portfolio-style analysis rather than clinical decision support
+The dataset is intended for analysis practice and simulation of healthcare reporting scenarios, so findings should be treated as portfolio-style analytical outputs rather than real clinical conclusions.
 
 ---
 
@@ -100,6 +97,6 @@ This dataset appears to be synthetic or simulated, which means some distribution
 
 The final output is a structured Power BI dashboard suitable for:
 
-- portfolio presentation
+- analytics portfolio presentation
 - interview discussion
-- demonstration of healthcare analytics capability
+- demonstration of healthcare BI capability
