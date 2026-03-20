@@ -2,51 +2,45 @@
 
 ## Healthcare System Overview
 
-### 1. Patient volume is high at system level
-The dashboard shows a large total patient count, indicating substantial healthcare system activity.
+### 1. System-level activity can be monitored through KPI reporting
+The dashboard provides a clear top-line view of patient volume, revenue, and average LOS.
 
-### 2. Revenue concentration is significant
-Total revenue is high, suggesting meaningful variation in financial contribution across patient activity and facilities.
+### 2. Medical condition mix can be explored interactively
+Condition-level charts allow quick comparison of patient counts across major categories.
 
-### 3. Average LOS provides operational context
-Average length of stay offers an important view into system-level efficiency and patient flow.
+### 3. Demographic breakdowns support segmentation
+Gender and age-related views support exploration of patient composition.
 
-### 4. Medical conditions appear evenly distributed
-The patient condition distribution is relatively balanced across major categories, which may reflect the synthetic nature of the dataset.
-
-### 5. Gender split is almost even
-The gender donut chart indicates a near-even distribution between male and female patients.
-
-### 6. Billing and age vary by condition
-The scatter chart suggests that different conditions are associated with different average billing patterns and patient ages.
+### 4. Billing patterns can be analysed by condition
+The scatter chart helps compare average billing and age by medical condition.
 
 ---
 
 ## Hospital Performance Analysis
 
-### 1. A small set of hospitals drives the most revenue
-Top revenue hospitals stand out clearly, indicating concentration of financial performance.
+### 1. Revenue is concentrated among a subset of hospitals
+Top hospital rankings show that financial contribution is not equally distributed.
 
-### 2. Patient volume does not fully explain hospital value
-Some hospitals handle high patient volume, but this does not always correspond directly to the highest revenue or highest value per patient.
+### 2. Patient volume alone does not explain hospital value
+Hospitals with high patient counts are not always the highest-value hospitals.
 
-### 3. Average LOS helps identify relative efficiency
-Hospitals with higher average LOS may indicate more complex cases or less efficient patient flow.
+### 3. Average LOS supports efficiency comparison
+Hospital-level LOS provides a practical way to compare operational performance.
 
-### 4. Revenue per patient is a stronger comparison metric
-Total revenue alone can be misleading. Revenue per patient provides a cleaner measure of hospital value.
+### 4. Revenue per patient is a strong comparison metric
+This metric helps identify high-value hospitals beyond total revenue alone.
 
-### 5. Revenue and LOS do not move together consistently
-The performance scatter suggests that hospitals with higher revenue do not necessarily have higher LOS, highlighting operational variation.
+### 5. Multi-metric comparison improves interpretation
+Using revenue, LOS, and patient volume together provides a more useful view of hospital performance than any one metric on its own.
 
 ---
 
 ## Recommendation Themes
 
-This dashboard supports three major themes for discussion:
+This dashboard supports discussion around:
 
 - operational efficiency
-- financial concentration
-- comparative hospital performance
-
-These are useful for portfolio presentation because they show both technical dashboard skill and business interpretation.
+- hospital comparison
+- revenue concentration
+- patient mix
+- performance monitoring
