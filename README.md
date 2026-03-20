@@ -1,28 +1,47 @@
-
 # Healthcare System Performance Dashboard
 
 ## Overview
 
-This project presents a Power BI dashboard designed to analyse healthcare system performance using a real-world style patient dataset. The dashboard focuses on operational, demographic, financial, and hospital-level performance insights.
+This project presents a multi-page Power BI dashboard designed to analyse healthcare system performance using the **Health_Care Real-World Data: 55K Patients** dataset.
 
-The report is structured to help stakeholders answer practical questions such as:
+The dashboard focuses on operational, demographic, financial, and hospital-level performance insights. It was built to demonstrate practical healthcare analytics skills in Power BI, including KPI design, DAX measures, interactive filtering, and dashboard storytelling.
 
-- How many patients are being handled across the system?
-- What is the total revenue generated?
-- What is the average length of stay?
-- Which hospitals generate the most revenue?
-- Which hospitals handle the highest patient volume?
-- Which hospitals generate the highest revenue per patient?
-- Are higher-revenue hospitals also less efficient or more efficient?
+This project demonstrates an end-to-end analytics workflow, starting from dataset exploration and progressing to an interactive Power BI dashboard for business insights.
 
-This project was built as a portfolio piece to demonstrate healthcare analytics, dashboard design, DAX, data modelling, and storytelling in Power BI.
+---
+
+## Project Context
+
+This project is based on the Kaggle dataset:
+
+**Health_Care Real-World Data: 55K Patients**  
+Source: `https://www.kaggle.com/datasets/prashantkumaryt/health-care-real-world-data-55k-patients`
+
+The dataset contains **55,500 healthcare patient records** and is designed to simulate real-world hospital and healthcare system data. It is distributed as **1 CSV file**. This makes it suitable for exploratory analysis, SQL practice, and business intelligence reporting.
+
+---
+
+## Business Problem
+
+Healthcare organisations generate large volumes of structured patient and operational data, but raw records alone do not support decision-making.
+
+This project transforms healthcare data into an interactive Power BI dashboard that allows stakeholders to:
+
+- monitor patient volumes
+- compare hospital performance
+- evaluate revenue concentration
+- assess average length of stay
+- identify high-value hospitals using revenue per patient
+- explore patient demographics and medical condition patterns
+
+The goal is to convert tabular healthcare data into a clear executive-style reporting tool.
 
 ---
 
 ## Dashboard Pages
 
 ### 1. Healthcare System Overview
-This page provides a high-level view of the healthcare system, including:
+This page provides a system-level view of healthcare activity, including:
 
 - Total Patients
 - Total Revenue
@@ -30,11 +49,11 @@ This page provides a high-level view of the healthcare system, including:
 - Average Billing
 - Patient admissions trend over time
 - Patient volume by medical condition
-- Gender distribution of patients
+- Gender distribution
 - Average billing vs age by condition
 
 ### 2. Hospital Performance Analysis
-This page compares hospital-level performance using:
+This page focuses on comparing hospitals using:
 
 - Top revenue-generating hospitals
 - Hospitals by patient volume
@@ -44,40 +63,24 @@ This page compares hospital-level performance using:
 
 ---
 
-## Business Problem
-
-Healthcare organisations generate large volumes of operational and patient data, but raw data alone does not support effective decision-making. Leadership teams need clear, interactive reporting to identify:
-
-- performance differences between hospitals
-- bottlenecks in patient flow
-- revenue concentration
-- high-value facilities
-- variations in efficiency and length of stay
-
-This dashboard transforms raw healthcare data into an executive-style reporting tool that supports performance monitoring and strategic analysis.
-
----
-
 ## Data Source
 
-This project uses a healthcare patient dataset sourced from Kaggle and imported into Power BI. The data includes fields such as:
+This project uses the following dataset:
 
-- Name
-- Age
-- Gender
-- Blood Type
-- Medical Condition
-- Date of Admission
-- Discharge Date
-- Admission Type
-- Doctor
-- Hospital
-- Insurance Provider
-- Billing Amount
-- Room Number
-- Medication
-- Test Results
-- Length_of_Stay
+**Health_Care Real-World Data: 55K Patients**  
+Kaggle: `https://www.kaggle.com/datasets/prashantkumaryt/health-care-real-world-data-55k-patients`
+
+According to the dataset page, it contains **55,500 healthcare patient records** designed to simulate real-world hospital and healthcare system data.
+
+The dataset supports analysis of fields such as:
+
+- patient demographics
+- hospital admissions
+- discharge details
+- medical conditions
+- billing amounts
+- doctors and hospitals
+- operational and financial metrics
 
 ---
 
@@ -87,34 +90,11 @@ This project uses a healthcare patient dataset sourced from Kaggle and imported 
 - DAX
 - Power Query
 - GitHub
-- CSV / tabular healthcare dataset
+- CSV dataset
 
 ---
 
 ## Key Measures
 
-The report uses the following main DAX measures:
-
 ```DAX
 Total Patients = COUNT('Healthcare_dataset'[Name])
-
-Total Revenue = SUM('Healthcare_dataset'[Billing Amount])
-
-Average LOS = AVERAGE('Healthcare_dataset'[Length_of_Stay])
-
-Average Billing = AVERAGE('Healthcare_dataset'[Billing Amount])
-
-Revenue per Patient =
-DIVIDE([Total Revenue], [Total Patients])
-
-Key Insights
-
-Revenue is concentrated among a small group of hospitals rather than evenly distributed across the system.
-
-Hospitals with higher revenue do not always have higher average length of stay, suggesting performance differences across facilities.
-
-Patient volume and financial value do not always move together, meaning high-volume hospitals are not automatically the highest-value hospitals.
-
-Revenue per patient provides a more meaningful comparison than total revenue alone when assessing hospital value.
-
-Length of stay is more useful when viewed as an average by hospital rather than a total.
